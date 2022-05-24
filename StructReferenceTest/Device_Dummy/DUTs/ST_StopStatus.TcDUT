@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.10">
+  <DUT Name="ST_StopStatus" Id="{b694b273-1cdb-4d0a-ae72-b277d005ce4f}">
+    <Declaration><![CDATA[TYPE ST_StopStatus :
+STRUCT
+	PalletPresent :					BOOL;
+	ReadyToAccept :					BOOL;
+	PathClear :						BOOL;
+	ToolingClear :					BOOL;
+	InTransit :						BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.10">
+  <POU Name="ReferenceBlock" Id="{48b98226-5d65-43d8-a488-486dd48bd879}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK ReferenceBlock
+
+VAR
+	stStopStatus	:ST_StopStatus;
+	refStopStatus	:REFERENCE TO ST_StopStatus;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[refStopStatus REF= stStopStatus;]]></ST>
+    </Implementation>
+    <LineIds Name="ReferenceBlock">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

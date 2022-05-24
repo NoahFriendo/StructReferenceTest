@@ -1,0 +1,23 @@
+﻿{
+  "parameters": [
+    {
+      "name": "data-tchmi-dev_referenceblock",
+      "displayName": "Dev_ReferenceBlock",
+      "visible": true,
+      "type": "tchmi:server#/definitions/PLC1.ReferenceBlock",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "Dev_ReferenceBlock",
+      "propertySetterName": "setDev_ReferenceBlock",
+      "propertyGetterName": "getDev_ReferenceBlock",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../Packages/Beckhoff.TwinCAT.HMI.Framework.12.756.1/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

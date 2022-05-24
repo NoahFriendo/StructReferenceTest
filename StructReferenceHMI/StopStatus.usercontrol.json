@@ -1,0 +1,23 @@
+﻿{
+  "parameters": [
+    {
+      "name": "data-tchmi-st_stopstatus",
+      "displayName": "ST_StopStatus",
+      "visible": true,
+      "type": "tchmi:server#/definitions/PLC1.ST_StopStatus",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "ST_StopStatus",
+      "propertySetterName": "setST_StopStatus",
+      "propertyGetterName": "getST_StopStatus",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../../../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.754.4/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

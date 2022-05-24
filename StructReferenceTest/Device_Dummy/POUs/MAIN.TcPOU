@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.10">
+  <POU Name="MAIN" Id="{5f2e6d7d-97ea-4e54-81a5-1d341896552d}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR_INPUT
+	xInit			:BOOL:=TRUE;
+END_VAR
+VAR
+	fbRef : ReferenceBlock;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF xInit THEN
+	xInit:=FALSE;
+	fbRef();
+END_IF
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="26" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
