@@ -15,6 +15,22 @@
       "propertySetterName": "setDev_ReferenceBlock",
       "propertyGetterName": "getDev_ReferenceBlock",
       "refTo": ""
+    },
+    {
+      "name": "data-tchmi-symbolname_referenceblock",
+      "displayName": "SymbolName_ReferenceBlock",
+      "visible": true,
+      "type": "tchmi:general#/definitions/String",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "SymbolName_ReferenceBlock",
+      "propertySetterName": "setSymbolName_ReferenceBlock",
+      "propertyGetterName": "getSymbolName_ReferenceBlock",
+      "refTo": ""
     }
   ],
   "virtualRights": [],

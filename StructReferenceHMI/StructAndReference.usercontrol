@@ -23,8 +23,43 @@
 ]
 </script>
 <div id="StopStatus_3" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="StopStatus.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-st_stopstatus="%pp%Dev_ReferenceBlock::stStopStatus%/pp%">
+
+
+
+
 </div>
-<div id="StopStatus_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="StopStatus.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-st_stopstatus="%pp%Dev_ReferenceBlock::refStopStatus%/pp%">
+<div id="StopStatus_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="StopStatus.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0">
 </div>
 </div>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "StructAndReference.onAttached",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "var symbol_name = TcHmi.Symbol.readEx(\"%pp%SymbolName_ReferenceBlock%/pp%\");",
+          "console.log(\"Symbol Name: \" + symbol_name);",
+          "",
+          "//Broken up so TwinCAT hopefully doesn't manipulate this string",
+          "var symbol_expression = \"%s\" + \"%\" + symbol_name + \"::refStopStatus\" + \"%/s\" + \"%\";",
+          "console.log(\"Symbol Expression: \" + symbol_expression);",
+          "",
+          "var myControl = TcHmi.Controls.get('StopStatus_4');",
+          "console.log(myControl);",
+          "if(myControl){",
+          "    TcHmi.Binding.create(symbol_expression, myControl.setST_StopStatus, myControl);",
+          "}"
+        ],
+        "injectContextObject": false,
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ]
+  }
+]
+</script>
 </div>
